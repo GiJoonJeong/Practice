@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>KartRace</title>
+    <link rel="icon" type="image/logo" href="./image/brand.gif">
+    <link rel="stylesheet" type="text/css" href="./css/homepage_main.css">
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
+
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script>
+        window.onload = function () {
+            $("#page_footer").load("./footer.html");
+
+            let imgs = [
+                "./image/2.jpg",
+                "./image/3.jpg",
+                "./image/4.jpg"
+            ];
+
+            let div_img = document.getElementById("roll");
+            let i = 0;
+
+            function fn_change_img() {
+                console.log("fn_change_img");
+                div_img.style.backgroundImage = "url(" + imgs[i] + ")"
+                if (i == 2) {
+                    i = 0;
+                } else {
+                    i++;
+                }
+                div_img.style.transitionDuration = "2s";
+            }
+            setInterval(function () {
+                fn_change_img();
+            }, 4000);
+
+
+
+
+
+
+
+
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="top" class="intro">
+            <div class="hearder">
+                <div class="logoimg">
+                    <img src="./image/brand.gif">
+                </div>
+                <ul class="nav">
+                    <li><a href="./homepagemain.html">홈</a></li>
+                    <li><a href="#게시판">게시판</a></li>
+                    <li><a href="./map.html">오시는길</a></li>
+                    <li><a href="#예약">예약</a>
+                        <ul>
+                            <li><a href="#">양산</a></li>
+                            <li><a href="#">통영</a></li>
+                            <li><a href="#">부산</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./board_list.html">공지사항</a></li>
+                    <li><a href="./login.html">로그인</a></li>
+                </ul>
+            </div>
+
+             <!-- 반응형 추가 s -->
+
+        <input type="checkbox" id="menuicon">
+        <!-- 3줄 선 그리기 -->
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </label>
+
+        <div class="header_icon">
+            <ul class="menu">
+                <li><a href="./homepagemain.html">홈</a></li>
+                <li><a href="#게시판">게시판</a></li>
+                <li><a href="./map.html">오시는길</a></li>
+                <li><a href="#예약">예약</a></li>
+                <li><a href="./board_list.html">공지</a></li>
+            </ul>
+        </div>
+
+
+
+        </div>
+        <div id="roll"></div>
+
+       
+
+        <!-- header end -->
+        <div class="sub_title_div">
+            <ul class="sub_title">
+                <li>
+                    <div class="icon_img">
+                        <img src="./image/content.png">
+                    </div>
+                    <div class="contents1_bold"></div>
+                    <p>Bulletin board</p>
+                </li>
+                <li>
+                    <div class="icon_img">
+                        <img src="./image/map.png">
+                    </div>
+                    <div class="contents1_bold"></div>
+                    <p>Directions </p>
+                </li>
+                <li>
+                    <div class="icon_img">
+                        <img src="./image/reserved.png">
+                    </div>
+                    <div class="contents1_bold"></div>
+                    <p>Reserved</p>
+                </li>
+            </ul>
+        </div>
+        <div class="howtousekart">
+            <h1 class="howtouse">회원탑승영상</h1>
+            <li>
+                <div class="youtube">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8FZLGBT7HQ0"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/F40ImMZUGd0"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wco_vIMHptA"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </li>
+        </div>
+        <!-- sub_title_div end -->
+        <!-- <div class="main_text0"> -->
+
+        <div class="noticetext">
+
+            <div class="notice">
+                <h1 id="notice">공지사항</h1>
+                <div>
+                    <img src="./image/notice.png" alt="notice" />
+
+                    <li><a href="./board_list.html">공지사항 더보기</a></li>
+
+                </div>
+
+
+            </div>
+            <div class="notice0">
+                <div>
+                    <h1 class="notice1"><a href="./board_list.html">상시 채용 공고</h1>
+                    <p> KartRace 와 함께할 직원을 상시 모집합니다.
+                        <br>
+                        - 1~3개월, 기간별 가능(주 5일)
+                        <br>
+                        - 기숙사 운영
+                        <br>
+                        (기숙사비 100,000원_기타공과금 별도)
+                        <br>
+                        - 이메일 지원 <kijoon2008@gmail.com>
+                            <br>
+                            → 이메일 지원 시 확인하여 연락드립니다.
+                            <br>
+                            [ 지원 시 작성내용 ]
+                            <br>
+                            - 이력서 첨부
+                            <br>
+                            - 이름, 나이, 연락처
+                            <br>
+                            - 희망근무기간(월)
+                            <br>
+                            - 지원분야 (카트운영/서바이벌 운영/카페 바리스타)
+                            </a>
+                    </p>
+                </div>
+                <div>
+                    <h1 class="notice2"><a href="./board_list.html">우천시 카트 탑승</h1>
+                    <p>* 우천시 주의사항
+                        <br>
+                        1. 얼굴에 물이 튀거나 옷이 젖을 수 있습니다.
+                        <br>
+                        → 빗물이나 바닥에 고인 물이 타이어에 의해 젖을 수 있습니다.
+                        <br>
+                        2. 도로가 미끄럽습니다.
+                        <br>
+                        → 제동거리가 길어져 차량간격은 15m 이상 유지해야 합니다.
+                        <br>
+                        3. 과속 절대 금지
+                        <br>
+                        → 정지 시 카트가 드리프트 될 수 있어 사고위험이 높습니다.
+                        <br>
+                        4. 핸드폰 사용 금지
+                        <br>
+                        → 한손운전은 위험하니, 두손으로 꼭 핸들을 잡고 이용부탁드립니다.
+                        <br>
+                        * 우천시 즐기는 법
+                        <br>
+                        - 한산한 카트 트랙으로 여유로운 운행이 가능합니다.
+                        <br>
+                        - 바람과 함께 스트레스를 풀어보세요!
+                        <br>
+                        - 시원한 빗줄기로 생각비우기도 가능!
+                        <br>
+                        - 연인, 가족, 친구와 함께 추억을 쌓아보세요
+                        <br>
+                        - 날리는 비에 체감속도가 높아 속도감을 즐겨보세요:)
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer id="page_footer"></footer>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
